@@ -49,11 +49,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configurations\FieldDataTypesConfiguration.cs" />
     <Compile Include="Configurations\FieldsConfiguration.cs" />
     <Compile Include="Configurations\ItemsConfiguration.cs" />
+    <Compile Include="Configurations\ItemValuesConfiguration.cs" />
     <Compile Include="Configurations\ListsConfiguration.cs" />
+    <Compile Include="Entities\FieldDataTypes.cs" />
     <Compile Include="Entities\Fields.cs" />
     <Compile Include="Entities\Items.cs" />
+    <Compile Include="Entities\ItemValues.cs" />
     <Compile Include="Entities\Lists.cs" />
     <Compile Include="MyDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

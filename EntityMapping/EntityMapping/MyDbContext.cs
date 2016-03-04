@@ -21,12 +21,18 @@ namespace EntityMapping
 
         public IDbSet<Items> Items { get; set; }
 
+        public IDbSet<ItemValues> ItemValues { get; set; }
+
+        public IDbSet<FieldDataTypes> FieldDataTypes { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Configurations.Add(new ListsConfiguration());
             modelBuilder.Configurations.Add(new FieldsConfiguration());
             modelBuilder.Configurations.Add(new ItemsConfiguration());
+            modelBuilder.Configurations.Add(new ItemValuesConfiguration());
+            modelBuilder.Configurations.Add(new FieldDataTypesConfiguration());
         }
     }
 }

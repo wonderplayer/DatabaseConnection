@@ -4,18 +4,16 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace EntityMapping.Configurations
 {
-    public class ItemsConfiguration : EntityTypeConfiguration<Items>
+    class FieldDataTypesConfiguration : EntityTypeConfiguration<FieldDataTypes>
     {
-        public ItemsConfiguration(string schema = "dbo")
+        public FieldDataTypesConfiguration(string schema = "dbo")
         {
-            ToTable(schema + ".Items");
+            ToTable(schema + ".FieldDataTypes");
 
             HasKey(x => x.Id);
 
             Property(x => x.Id).IsRequired().HasColumnName("Id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
-            Property(x => x.ListId).IsRequired().HasColumnName("ListId");
-
-            HasRequired(i => i.Lists).WithMany(l => l.Items).HasForeignKey(i => i.ListId);
+            Property(x => x.Type).IsRequired().HasColumnName("Type").HasMaxLength(100);
         }
     }
 }

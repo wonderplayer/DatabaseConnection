@@ -14,9 +14,11 @@ namespace EntityMapping.Configurations
 
             Property(x => x.Id).IsRequired().HasColumnName("Id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
             Property(x => x.Name).IsRequired().HasColumnName("Name").HasMaxLength(500);
+            Property(x => x.TypeId).IsRequired().HasColumnName("TypeId");
             Property(x => x.ListId).IsRequired().HasColumnName("ListId");
 
             HasRequired(f => f.Lists).WithMany(l => l.Fields).HasForeignKey(f => f.ListId);
+            HasRequired(f => f.Types).WithMany(t => t.Fields).HasForeignKey(f => f.TypeId);
         }
     }
 }
