@@ -4,7 +4,7 @@ namespace EntityMapping.Entities
 {
     public class Lists
     {
-        public int Id { get; set; }
+        public short Id { get; set; }
 
         public string GUId { get; set; }
 

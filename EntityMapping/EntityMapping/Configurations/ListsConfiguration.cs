@@ -8,7 +8,7 @@ namespace EntityMapping.Configurations
     {
         public ListsConfiguration(string schema = "dbo")
         {
-            ToTable(schema + "Lists");
+            ToTable(schema + ".Lists");
 
             HasKey(x => x.Id);
             Property(x => x.Id).IsRequired().HasColumnName("Id").HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);

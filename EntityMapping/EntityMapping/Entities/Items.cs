@@ -6,7 +6,7 @@
 
         public string SchemaXML { get; set; }
 
-        public int ListId { get; set; }
+        public short ListId { get; set; }
 
         public virtual Lists Lists { get; set; }
     }

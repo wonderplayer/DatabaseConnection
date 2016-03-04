@@ -8,7 +8,7 @@ namespace EntityMapping.Configurations
     {
         public FieldsConfiguration(string schema = "dbo")
         {
-            ToTable(schema + "Fields");
+            ToTable(schema + ".Fields");
 
             HasKey(x => x.Id);
 
@@ -16,7 +16,7 @@ namespace EntityMapping.Configurations
             Property(x => x.Name).IsRequired().HasColumnName("Name").HasMaxLength(500);
             Property(x => x.ListId).IsRequired().HasColumnName("ListId");
 
-            HasRequired(f => f.Lists).WithMany(l => l.Fields).HasForeignKey(f => f.Lists);
+            HasRequired(f => f.Lists).WithMany(l => l.Fields).HasForeignKey(f => f.ListId);
         }
     }
 }

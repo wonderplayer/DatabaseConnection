@@ -8,7 +8,7 @@ namespace EntityMapping.Configurations
     {
         public ItemsConfiguration(string schema = "dbo")
         {
-            ToTable(schema + "Items");
+            ToTable(schema + ".Items");
 
             HasKey(x => x.Id);
 
