@@ -14,7 +14,7 @@ namespace SPMToolServices
     {
 
         [OperationContract]
-        List<GetLists> GetLists();
+        List<ListInfo> GetLists();
 
     }
 }

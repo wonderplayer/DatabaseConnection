@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.Web;
+﻿using System.Runtime.Serialization;
 
 namespace SPMToolServices.DataContracts
 {
     [DataContract]
-    public class GetLists
+    public class ListInfo
     {
         [DataMember]
         public short Id { get; set; }
